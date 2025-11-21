@@ -18,9 +18,6 @@ export default defineConfig(({mode}) => {
       dir: './tests/unit',
       environment: 'jsdom',
       setupFiles: './tests/setup.js'
-    },
-    plugins: [
-      tailwindcss(),
-    ]
+    }
   }
 })
