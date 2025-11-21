@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+    --color-midnightblue: midnightblue;
+    --color-paleturquoise: paleturquoise;
+    --color-lightblue: lightblue;
+    --font-viaoda: ViaodaLibre, Helvetica, sans-serif;
+}

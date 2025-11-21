@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
 
 import { REPO_NAME } from './config'
 
@@ -18,6 +19,9 @@ export default defineConfig(({mode}) => {
       dir: './tests/unit',
       environment: 'jsdom',
       setupFiles: './tests/setup.js'
-    }
+    },
+    plugins: [
+      tailwindcss(),
+    ]
   }
 })

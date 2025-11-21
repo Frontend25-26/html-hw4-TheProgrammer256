@@ -1,0 +1,83 @@
+$text-color: midnightblue;
+$font-family: ViaodaLibre, Helvetica, sans-serif;
+$button-color: paleturquoise;
+$border-color: lightblue;
+$border-radius: 1rem;
+$bd: solid 3px $border-color;
+
+%common {
+  color: $text-color;
+  font-family: $font-family;
+  border: $bd;
+  border-radius: $border-radius;
+}
+
+.scss {
+  @extend %common;
+  margin: 0.25rem 3rem;
+
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    border-top: $bd;
+    border-bottom: $bd;
+  }
+
+  h2, h3, p, button {
+    margin: 0.75rem 0.75rem;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+
+  .desc {
+    $bgs: (
+            image: url("img/icon.jfif"),
+            repeat: no-repeat,
+            size: 1.5rem,
+            position-y: 0.150rem,
+    );
+
+    @each $prop, $value in $bgs {
+      background-#{$prop}: #{$value};
+    }
+    font-size: 1.125rem;
+    text-indent: 1.5rem;
+  }
+
+  button {
+    @extend %common;
+    background-color: $button-color;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    @mixin effect($bright, $shadow) {
+      filter: brightness($bright);
+      box-shadow: 0 0 $shadow $border-color;
+    }
+
+    &:hover {
+      @include effect(90%, 1rem);
+    }
+
+    &:active {
+      @include effect(70%, 2rem);
+    }
+
+    &.pet {
+      float: right;
+    }
+  }
+}
