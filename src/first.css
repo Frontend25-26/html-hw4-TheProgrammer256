@@ -1,0 +1,77 @@
+:root {
+    --text-color: midnightblue;
+    --font-family: ViaodaLibre, Helvetica;
+
+    --button-color: paleturquoise;
+
+    --border-color: lightblue;
+    --border-radius: 1rem;
+    --bd: solid 3px var(--border-color);
+}
+
+.css3 {
+    color: var(--text-color);
+    font-family: var(--font-family), sans-serif;
+    margin: 0.25rem 3rem;
+    border: var(--bd);
+    border-radius: var(--border-radius);
+}
+
+.css3 h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+}
+
+.css3 img {
+    width: 100%;
+    border-top: var(--bd);
+    border-bottom: var(--bd);
+}
+
+.css3 :is(h2, h3, p, button) {
+    margin: 0.75rem 0.75rem;
+}
+
+.css3 h2 {
+    font-size: 1.875rem;
+}
+
+.css3 h3 {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.css3 .desc {
+    background-image: url("img/icon.jfif");
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position-y: 0.150rem;
+    font-size: 1.125rem;
+    text-indent: 1.5rem;
+}
+
+.css3 button {
+    background-color: var(--button-color);
+    border: var(--bd);
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    font-family: var(--font-family), sans-serif;
+    font-weight: bold;
+    color: var(--text-color);
+
+    &:hover {
+        filter: brightness(90%);
+        box-shadow: 0 0 1rem var(--border-color);
+    }
+
+    &:active {
+        filter: brightness(70%);
+        box-shadow: 0 0 2rem var(--border-color);
+    }
+}
+
+.css3 button.pet {
+    float: right;
+}
